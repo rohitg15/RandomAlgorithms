@@ -20,3 +20,7 @@ Thus, the best possible result that we would like to show is **max( P(c|w) for a
 3. we use a hack to get P(w|c) - Recall: P(w|c) is the probability that the user would type w given that they meant c. 
 
 The rest of the program is faily straightforward and we can implement this in less than 50 lines of python code.
+
+### Usage
+
+*python3 ./spell_corrector.py ./big.txt shelock*

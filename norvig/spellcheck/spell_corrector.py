@@ -18,10 +18,10 @@ class SpellChecker:
         return max(self.__candidates(word), key=Pr)
 
     def __candidates(self, word: str) -> List[str]:
-        def known(words: List[str]) -> List:
+        def known(words: List[str]) -> List[str]:
             return [w for w in words if w in self._known_words]
         # assuming that Pr(word) > Pr(1edit)
-        return known([word]) or known(SpellChecker.__edits1(word))
+        return known([word]) or known(SpellChecker.__edits1(word)) or [word]
     
     @staticmethod
     def __edits1(word: str) -> List[str]:

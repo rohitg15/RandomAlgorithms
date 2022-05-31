@@ -1,6 +1,6 @@
 # Spelling Checker by Peter Norvig
 
-python implementation of a simple probabilistic spell-check by peter norvig based on http://norvig.com/spell-correct.html
+python implementation of a simple probabilistic spell-check by peter norvig based on https://norvig.com/spell-correct.html
 
 ## Idea
 
@@ -13,7 +13,7 @@ P(c|w) - where c is the candidate word we want to consider showing to the user a
 
 we use Baye's theorem to rewrite P(c|w) as P(c) * P(w|c) / P(w)
 
-Thus, the best possible result that we would like to show is ** max( P(c|w) for all c in candidates(w) ) **
+Thus, the best possible result that we would like to show is **max( P(c|w) for all c in candidates(w) )**
 
 1. since P(w) doesn't change for each candidate, we factor that out
 2. we obtain P(c) from known word lists (Recall: P(c) is the probability of the word c occuring in the language)
